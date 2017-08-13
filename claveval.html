@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <title>Login</title>
+﻿<head>
+  <title>Login1</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,22 +12,39 @@
   <h1>Programa Base de Datos</h1>
   <p>Programa que controla una base de datos en MYSQL</p>
 </div>
-<center>
-<form action = "claveval.html" name="clave">
-User: <input type="text" name="user" size="15">
-<br>
-Pass: <input type="password" name="pass" size="15">
-<br>
-<input type="submit" value="LOGIN">
-<br>    
-<a href= "principal.html">Inicio</a></p>
-</center>
-</form> 
+
+<?php
+
+$user = $_REQUEST['user'];
+$pass = $_REQUEST['pass'];
+$user1 = Admin;
+$pass1 = 12345;
+
+if ($user == $user1)
+{
+  if ($pass == $pass1)
+  {
+    //header ('location: /admin.php');
+    echo md5($pass1);
+  }
+  else 
+  {
+    echo "Contraseña Incorrectos".$pass1."<br>";
+
+  }
+}
+  else
+  {
+    echo "Usuario Incorrecto".$user."<br>";
+
+  }
+  
+  ?>
+<a href= "inicio.html">Inicio</a></p>
   
   </div>
   <div align= "center" style= "background : #b8b894"; class="panel-footer">Jose Fernando Sanchez Gomez UNAD</div>
 </div>
-
 
 </body>
 </html>
