@@ -24,7 +24,7 @@ if ($user == $user1)
 {
   if ($pass == $pass1)
   {
-    //header ('location: /admin.php');
+    //header ('location: /index.html');
     echo md5($pass1);
   }
   else 
@@ -40,7 +40,7 @@ if ($user == $user1)
   }
   
   ?>
-<a href= "inicio.html">Inicio</a></p>
+<a href= "index.html">Inicio</a></p>
   
   </div>
   <div align= "center" style= "background : #b8b894"; class="panel-footer">Jose Fernando Sanchez Gomez UNAD</div>
